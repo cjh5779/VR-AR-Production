@@ -6,7 +6,6 @@
 </div> 
 
 ## 📝 소개
-[![Video Label](http://img.youtube.com/vi/LYk9SU07zkw.jpg)](https://youtu.be/LYk9SU07zkw)
 - *VR/AR/게임제작기초 기말 프로젝트*
 </br></br>
 -프로젝트 기획
@@ -15,6 +14,14 @@
   - 플레이어가 움직이는 캐릭터를 조작하며 다양한 스킬을 활용해 몬스터를 처치하는 3D 게임을 개발하고자 했습니다. 기존에 수업에서 주로 다뤘던 2D 방식이 아닌 3D로 구현하여, Unity의 다양한 기능을 적극 활용함으로써 현실감을 높이고, 보다 몰입감 있는 게임 경험을 제공하는 것을 목표로 삼았습니다.
 
 <br />
+
+### 게임 비디오
+
+[![게임 영상 썸네일](http://img.youtube.com/vi/LYk9SU07zkw.jpg)](https://youtu.be/LYk9SU07zkw)
+<br>
+[**게임 비디오 보기**](https://youtu.be/LYk9SU07zkw)  
+<small>위의 썸네일을 클릭하거나 위 링크를 클릭하여 게임 영상을 시청하세요!</small>
+
 
 ## 화면 구성
 
