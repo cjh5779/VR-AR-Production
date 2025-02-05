@@ -17,7 +17,7 @@
 
 ### 게임 비디오
 
-[![게임 영상 썸네일](http://img.youtube.com/vi/LYk9SU07zkw.jpg)](https://youtu.be/LYk9SU07zkw)
+[![게임 영상 썸네일](https://img.youtube.com/vi/LYk9SU07zkw/0.jpg)](https://youtu.be/LYk9SU07zkw)
 
 이 영상에서는 게임 플레이의 하이라이트를 확인할 수 있습니다!
 
