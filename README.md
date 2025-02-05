@@ -15,6 +15,64 @@
 
 <br />
 
+## 화면 구성
+
+### 시작 씬
+게임 조작법과 목표를 알려주는 씬입니다.
+
+<div style="display: flex; align-items: center;">
+  <img width="400" alt="Start Scene" src="https://github.com/user-attachments/assets/11ccefb4-d8cf-47ff-9eb4-7c0742589228" style="margin-right: 20px;"/>
+  <ul>
+    <li>UI 아이콘을 배치하여 게임 조작법과 해당 키의 기능을 설명한다.</li>
+    <li>UI Button의 <code>OnClick()</code>을 활용하여, 플레이어가 조작법을 숙지한 후 <strong>Start 버튼</strong>을 통해 게임 씬으로 이동할 수 있도록 구현한다.</li>
+</ul>
+</div>
+
+---
+
+### 게임 씬
+게임을 플레이할 수 있는 메인 씬입니다.
+
+<div style="display: flex; align-items: center;">
+  <img width="400" alt="Game Scene" src="https://github.com/user-attachments/assets/77e0ed29-8622-4bb2-a2da-f622ca721fd2" style="margin-right: 20px;"/>
+  <ul>
+    <li><code>Input.GetKeyDown</code>을 사용하여 특정 키를 누르면 다양한 스킬이 발사되도록 구현한다.</li>
+    <li>몬스터의 스폰 위치를 지정하고, 일정 시간이 지나면 몬스터가 스폰되도록 구현한다.</li>
+    <li>Unity의 <strong>NavMesh</strong> 기능을 활용하여 스폰된 몬스터가 플레이어를 따라오도록 구현한다.</li>
+    <li>설정된 개수의 몬스터를 처치하면 <strong>보스 몬스터</strong>가 스폰되도록 구현한다.</li>
+    <li>몬스터와 보스의 공격을 <strong>근거리 공격</strong>과 <strong>원거리 공격</strong>으로 나누어 게임의 난이도를 높인다.</li>
+    <li><strong>파티클 시스템</strong>을 이용하여 플레이어와 몬스터의 공격에 <strong>이펙트</strong>를 추가해 게임의 퀄리티를 향상시킨다.</li>
+  </ul>
+</div>
+
+---
+
+### 게임 종료 씬  
+게임의 결과를 보여주는 씬입니다.
+
+<div style="display: flex; align-items: center;">
+  <img width="400" alt="Game Over Scene" src="https://github.com/user-attachments/assets/f423c877-a37f-4695-aba8-6110eca16f53" style="margin-right: 20px;"/>
+  <img width="400" alt="Victory Scene" src="https://github.com/user-attachments/assets/10f87d76-46d8-40b9-bd58-193bea84cdae" />
+</div>
+
+<ul>
+  <li><strong>결과 화면(Scene) 구성</strong>
+    <ul>
+      <li>게임 결과(승리/패배 등)에 따라 적절한 씬을 구현한다.</li>
+      <li>결과에 맞는 캐릭터 애니메이션을 적용하여 몰입감을 높인다.</li>
+    </ul>
+  </li>
+  <li><strong>UI 버튼 기능 추가</strong>
+    <ul>
+      <li><code>OnClick()</code>을 활용하여 게임 종료 또는 재시작 기능을 구현한다.</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+<br />
+
 ## ⚙ 기술 스택
 ### Front-end
 <div>
