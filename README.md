@@ -44,7 +44,7 @@
 <br />
 
 ## 💁‍♂️ 프로젝트 팀원
-|Front-End|
-|:--:|
-|![](https://github.com/cjh5779.png?size=120)|
-|[최정환](https://github.com/cjh5779)|
+|Front-End|Front-End|
+|:--:|:--:|
+|![](https://github.com/cjh5779.png?size=120)| |
+|[최정환](https://github.com/cjh5779)|[김영준](https://github.com/youngjoon0405)|
