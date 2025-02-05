@@ -18,9 +18,9 @@
 ### 게임 비디오
 
 [![게임 영상 썸네일](http://img.youtube.com/vi/LYk9SU07zkw.jpg)](https://youtu.be/LYk9SU07zkw)
-<br>
-[**게임 비디오 보기**](https://youtu.be/LYk9SU07zkw)  
-<small>위의 썸네일을 클릭하거나 위 링크를 클릭하여 게임 영상을 시청하세요!</small>
+
+이 영상에서는 게임 플레이의 하이라이트를 확인할 수 있습니다!
+
 
 
 ## 화면 구성
