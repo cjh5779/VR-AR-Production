@@ -6,6 +6,7 @@
 </div> 
 
 ## 📝 소개
+[![Video Label](http://img.youtube.com/vi/LYk9SU07zkw.jpg)](https://youtu.be/LYk9SU07zkw)
 - *VR/AR/게임제작기초 기말 프로젝트*
 </br></br>
 -프로젝트 기획
