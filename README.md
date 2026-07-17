@@ -2,120 +2,96 @@
   
 ### YoungJungTeam
 
-[<img src="https://img.shields.io/badge/프로젝트 기간-2023.11.08~2023.11.29-fab2ac?style=flat&logo=&logoColor=white" />]()
+![프로젝트 기간](https://img.shields.io/badge/프로젝트_기간-2023.11.08~2023.11.29-fab2ac?style=flat)
+
 </div> 
+
+<br>
 
 ## 📝 소개
 ### **VR/AR/게임 제작 기초 기말 프로젝트**
 
-이 프로젝트는 **마법소녀의 마을**을 침략한 **골렘들과 그들의 왕**을 마법을 통해 물리쳐 마을을 지키는 **액션 어드벤처 게임**입니다. 
+이 프로젝트는 **마법소녀의 마을**을 침략한 **골렘들과 그들의 왕**을 마법을 통해 물리쳐 마을을 지키는 **3D 액션 어드벤처 게임**입니다. 
 
-### **프로젝트 기획**
-- **게임 개요**  
-  플레이어는 마법소녀 캐릭터를 조작하여 다양한 스킬을 사용해 몬스터와 보스 몬스터를 처치하며 마을을 지키는 3D 액션 어드벤처 게임을 개발했습니다.  
-  기존의 2D 게임 방식이 아닌 3D로 구현하여 Unity의 다양한 기능을 적극 활용하고, 현실감을 높이며 몰입감 있는 게임 경험을 제공하는 것을 목표로 했습니다.
+<br>
 
-- **주요 목표**  
+## 💡 프로젝트 기획
+* **게임 개요**  
+  플레이어는 마법소녀 캐릭터를 조작하여 다양한 스킬을 사용해 몬스터와 보스 몬스터를 처치하며 마을을 지킵니다. 기존의 2D 게임 방식이 아닌 3D로 구현하여 Unity의 다양한 기능을 적극 활용하고, 현실감을 높이며 몰입감 있는 게임 경험을 제공하는 것을 목표로 했습니다.
+* **주요 목표**  
   - 3D 액션 어드벤처 게임 구현  
   - Unity의 다양한 기능을 활용하여 몰입감 있는 경험 제공  
-  - 마법소녀 캐릭터와 몬스터의 상호작용 강조  
+  - 마법소녀 캐릭터와 몬스터의 상호작용 및 타격감 강조  
 
-### 게임 비디오
+<br>
+
+## 🎬 게임 플레이 영상
 
 [![게임 영상 썸네일](https://img.youtube.com/vi/LYk9SU07zkw/0.jpg)](https://youtu.be/LYk9SU07zkw)  
-<small>위의 썸네일을 클릭하여 게임 영상을 시청하세요!</small>
+*(위의 이미지를 클릭하시면 유튜브 플레이 영상으로 이동합니다!)*
 
+<br>
 
-</br>
+## 🖥️ 화면 구성 (Features)
 
-## 🖥️ 화면 구성
+### 1️⃣ 시작 씬 (Start Scene)
+게임 조작법과 목표를 알려주는 대기 화면입니다.
 
-### 시작 씬
-게임 조작법과 목표를 알려주는 씬입니다.
+| 게임 시작 화면 | 주요 구현 내용 |
+| :---: | :--- |
+| <img width="500" alt="Start Scene" src="https://github.com/user-attachments/assets/11ccefb4-d8cf-47ff-9eb4-7c0742589228" /> | <ul><li>UI 아이콘을 배치하여 게임 조작법과 해당 키의 기능을 설명합니다.</li><li>UI Button의 `OnClick()` 이벤트를 활용하여, 플레이어가 조작법을 숙지한 후 **Start 버튼**을 누르면 게임 씬으로 이동하도록 구현했습니다.</li></ul> |
 
-<div style="display: flex; align-items: center;">
-  <img width="400" alt="Start Scene" src="https://github.com/user-attachments/assets/11ccefb4-d8cf-47ff-9eb4-7c0742589228" style="margin-right: 20px;"/>
-  <ul>
-    <li>UI 아이콘을 배치하여 게임 조작법과 해당 키의 기능을 설명한다.</li>
-    <li>UI Button의 <code>OnClick()</code>을 활용하여, 플레이어가 조작법을 숙지한 후 <strong>Start 버튼</strong>을 통해 게임 씬으로 이동할 수 있도록 구현한다.</li>
-</ul>
-</div>
+### 2️⃣ 게임 씬 (Game Scene)
+게임을 직접 플레이하며 전투가 벌어지는 메인 화면입니다.
 
----
+| 메인 전투 화면 | 주요 구현 내용 |
+| :---: | :--- |
+| <img width="500" alt="Game Scene" src="https://github.com/user-attachments/assets/77e0ed29-8622-4bb2-a2da-f622ca721fd2" /> | <ul><li>`Input.GetKeyDown`을 사용하여 특정 키 입력 시 다양한 스킬이 발사되도록 액션 로직을 구현했습니다.</li><li>몬스터의 스폰 위치를 지정하고, 일정 시간이 지나면 지속적으로 스폰되도록 구현했습니다.</li><li>Unity의 **NavMesh** 기능을 활용하여 스폰된 몬스터가 플레이어를 추적하도록 AI를 구현했습니다.</li><li>일정 개수의 몬스터를 처치하면 **보스 몬스터**가 등장합니다.</li><li>몬스터와 보스의 공격 패턴을 **근거리/원거리**로 나누어 난이도를 조절했습니다.</li><li>**파티클 시스템(Particle System)**을 이용해 공격 및 피격 이펙트를 추가하여 타격감을 향상시켰습니다.</li></ul> |
 
-### 게임 씬
-게임을 플레이할 수 있는 메인 씬입니다.
+### 3️⃣ 게임 종료 씬 (Game Over & Victory Scene)
+게임의 결과(승리 또는 패배)를 보여주는 씬입니다.
 
-<div style="display: flex; align-items: center;">
-  <img width="400" alt="Game Scene" src="https://github.com/user-attachments/assets/77e0ed29-8622-4bb2-a2da-f622ca721fd2" style="margin-right: 20px;"/>
-  <ul>
-    <li><code>Input.GetKeyDown</code>을 사용하여 특정 키를 누르면 다양한 스킬이 발사되도록 구현한다.</li>
-    <li>몬스터의 스폰 위치를 지정하고, 일정 시간이 지나면 몬스터가 스폰되도록 구현한다.</li>
-    <li>Unity의 <strong>NavMesh</strong> 기능을 활용하여 스폰된 몬스터가 플레이어를 따라오도록 구현한다.</li>
-    <li>설정된 개수의 몬스터를 처치하면 <strong>보스 몬스터</strong>가 스폰되도록 구현한다.</li>
-    <li>몬스터와 보스의 공격을 <strong>근거리 공격</strong>과 <strong>원거리 공격</strong>으로 나누어 게임의 난이도를 높인다.</li>
-    <li><strong>파티클 시스템</strong>을 이용하여 플레이어와 몬스터의 공격에 <strong>이펙트</strong>를 추가해 게임의 퀄리티를 향상시킨다.</li>
-  </ul>
-</div>
+| 게임 오버 화면 | 게임 클리어(승리) 화면 |
+| :---: | :---: |
+| <img width="400" alt="Game Over Scene" src="https://github.com/user-attachments/assets/f423c877-a37f-4695-aba8-6110eca16f53" /> | <img width="400" alt="Victory Scene" src="https://github.com/user-attachments/assets/10f87d76-46d8-40b9-bd58-193bea84cdae" /> |
 
----
+* **결과 화면(Scene) 구성**
+  * 플레이어의 체력이나 보스 처치 여부에 따라 승리/패배 씬으로 나뉘어 이동합니다.
+  * 결과에 맞는 캐릭터 애니메이션(좌절 또는 환호)을 적용하여 몰입감을 높였습니다.
+* **UI 버튼 기능 추가**
+  * `OnClick()`을 활용하여 '다시 시작(Restart)' 또는 '게임 종료(Exit)' 기능을 구현했습니다.
 
-### 게임 종료 씬  
-게임의 결과를 보여주는 씬입니다.
+<br>
 
-<div style="display: flex; align-items: center;">
-  <img width="400" alt="Game Over Scene" src="https://github.com/user-attachments/assets/f423c877-a37f-4695-aba8-6110eca16f53" style="margin-right: 20px;"/>
-  <img width="400" alt="Victory Scene" src="https://github.com/user-attachments/assets/10f87d76-46d8-40b9-bd58-193bea84cdae" />
-</div>
+## ⚙ 기술 스택 (Tech Stack)
 
-<ul>
-  <li><strong>결과 화면(Scene) 구성</strong>
-    <ul>
-      <li>게임 결과(승리/패배 등)에 따라 적절한 씬을 구현한다.</li>
-      <li>결과에 맞는 캐릭터 애니메이션을 적용하여 몰입감을 높인다.</li>
-    </ul>
-  </li>
-  <li><strong>UI 버튼 기능 추가</strong>
-    <ul>
-      <li><code>OnClick()</code>을 활용하여 게임 종료 또는 재시작 기능을 구현한다.</li>
-    </ul>
-  </li>
-</ul>
-
-
-
-<br />
-
-## ⚙ 기술 스택
 ### Front-end
-<div>
-<img width="90" alt="Image" src="https://github.com/user-attachments/assets/5ea17a38-71d9-4301-b701-e6b51f871b86" />
-<img width="90" alt="Image" src="https://github.com/user-attachments/assets/8039f347-29d9-4018-ba79-901e5410484a" />
-</div>
+<img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white"/> <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"/>
 
 ### Tools
-<div>
-<img src="https://github.com/yewon-Noh/readme-template/blob/main/skills/Github.png?raw=true" width="80">
-</div>
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
 
-<br />
+<br>
 
-## 🤔 자체 평가
-- **잘한 점**
-  - 기획한 스킬 이펙트에 맞춰 파티클 UI를 활용함으로써 스킬의 퀄리티를 향상시킬 수 있었다.
-  - 맵 제작 시 다양한 소스에서 에셋을 가져와 기획했던 배경과 유사한 환경을 구현할 수 있었다.
-  - 강의에서 다루지 않았던 네비메쉬 기능을 활용하여 몬스터가 플레이어를 추적하며 이동하도록 구현하였다.
-  - 공동 작업을 위해 GitHub을 사용하면서 GitHub에 대한 숙련도와 이해도를 높일 수 있었다.
+## 🤔 자체 평가 (Review)
 
-- **아쉬운 점**
-    - UI를 제작할 때 Scale With Screen Size 설정과 Anchor Presets을 활용하여 UI를 재배치해야 했지만, 이를 적용하지 않아 해상도가 다른 기기에서는 UI가 원하는 위치에 배치되지 않는 문제가 발생했다.
-    - 골렘이 돌을 던질 때, 직선상에 다른 골렘이 배치되어 있으면 플레이어에게 도달하지 않고 앞에 있는 골렘에 맞아 떨어지는 문제와, 골렘이 사망했을 때 스킬 쿨타임이 맞아떨어져 몬스터 오브젝트가 사라지기 전에 돌을 던지는 경우를 해결하지 못했다.
-    - 몬스터가 사망했지만 오브젝트가 아직 사라지지 않은 상태에서 플레이어와 충돌하면 여전히 데미지를 입는 문제를 해결하지 못했다.
-    - 현재 근접 공격은 태그로 충돌을 감지하여 데미지를 주고 애니메이션을 실행하도록 구현했지만, 공격 애니메이션으로 인해 팔의 위치가 변하는 점을 반영하지 못해, 실제로 주먹이 맞았을 때만 데미지를 입도록 하는 기능을 구현하지 못했다.
-<br />
+### ✨ 잘한 점
+* 기획한 스킬 이펙트에 맞춰 **파티클(Particle)**을 적극적으로 활용함으로써 전투 액션의 퀄리티를 크게 향상시킬 수 있었습니다.
+* 맵 제작 시 다양한 소스의 에셋을 조합하여 기획했던 배경 분위기와 가장 유사한 환경을 성공적으로 구축했습니다.
+* 강의에서 다루지 않았던 **네비메쉬(NavMesh)** 기능을 스스로 학습하고 적용하여, 몬스터가 플레이어를 자연스럽게 추적하며 이동하도록 구현해냈습니다.
+* 공동 작업을 위해 GitHub을 적극 사용하면서 버전 관리 및 협업에 대한 숙련도와 이해도를 크게 높였습니다.
+
+### 💦 아쉬운 점 및 개선 목표
+* UI 제작 시 `Scale With Screen Size` 설정과 `Anchor Presets`을 완벽하게 활용하지 못해, 해상도가 다른 기기에서는 UI가 엇나가는 반응형 UI 레이아웃 이슈가 발생했습니다.
+* 골렘이 투사체(돌)를 던질 때, 플레이어와의 직선상에 다른 골렘이 있으면 투사체가 통과하지 못하고 앞의 몬스터에 맞는 문제가 있었습니다. (콜라이더 레이어 분리 등 물리 엔진에 대한 추가 학습 필요)
+* 몬스터가 사망 처리가 되었음에도 오브젝트가 파괴되기 전에 플레이어와 닿으면 충돌 판정이 남아있어 데미지를 입는 버그를 완벽히 수정하지 못했습니다.
+* 근접 공격을 태그 충돌 방식으로 구현했으나, 애니메이션 진행에 따른 관절(팔, 다리)의 세밀한 Transform 위치 변화를 완벽히 트래킹하지 못해, 정확히 주먹이 닿는 타이밍에만 데미지가 들어가도록 하는 정교한 히트박스 구현에는 한계가 있었습니다.
+
+<br>
 
 ## 💁‍♂️ 프로젝트 팀원
-|Front-End|Front-End|
-|:--:|:--:|
-|![](https://github.com/cjh5779.png?size=120)| |
-|[최정환](https://github.com/cjh5779)|[김영준](https://github.com/youngjoon0405)|
+
+| 최정환 (Front-End) | 김영준 (Front-End) |
+| :---: | :---: |
+| <img src="https://github.com/cjh5779.png?size=120" width="120" /> | <img src="https://github.com/youngjoon0405.png?size=120" width="120" /> |
+| [@cjh5779](https://github.com/cjh5779) | [@youngjoon0405](https://github.com/youngjoon0405) |
